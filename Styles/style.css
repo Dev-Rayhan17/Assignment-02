@@ -160,3 +160,65 @@ color: #FFFFFF;
 font-family: 'ABeeZee', sans-serif;
 font-weight: normal;
 }
+.Techwave{
+    color: white;
+    font-weight: bold;
+    font-size: 48;
+    text-align: center;
+}
+.why {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 10px 20px;
+    background-color:#230E3D ;
+}
+
+.why h1{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    background-color: #230E3D;
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 25px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color:#230E3D;
+}
+.why-box{
+    padding:30px ;
+    border-radius: 20px;
+    transition: .3s;
+}
+.why-box:hover{
+    transform: translateY(-8px);
+}
+.premium {
+    grid-row: span 2;
+}
+.mobile {
+    grid-column: span 2;
+}
+.global{
+    grid-column: span 2;
+}
+.interviews{
+    grid-column: span 2;
+}
+
+.icon {
+    margin-bottom: 15px;
+}
+h3{
+    margin: 10px 0;
+    color: white;
+}
+p {
+    opacity: .8;
+    line-height: 1.7;
+    color: white;
+}
