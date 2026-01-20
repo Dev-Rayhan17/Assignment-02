@@ -31,12 +31,17 @@ color:transparent;
 .navbar-container li{
 list-style: none;
 }
-.menu {
+.menu-li {
     display: flex;
     gap: 32px;
     text-align: center;
     font-size: small;
     margin: auto;
+}
+.menu-icon{
+    display: none;
+    width: 28px;
+    cursor: pointer;
 }
 .btn {
 margin-right: 200px;
@@ -178,6 +183,12 @@ gap: 5px;
 padding-left: 200px;
 padding-right: 200px;
 }
+@media screen and (max-width : 576px) {
+.About{
+padding: 20px 40px;
+}
+}
+ 
 .about-content {
 color: white;
 justify-content: center;
@@ -197,6 +208,12 @@ line-height: 2;
     gap: 20px;
     max-width: 1100px;
     margin: 60px auto;
+}
+@media screen and (max-width : 576px){
+.box-container{
+    grid-template-columns: repeat(2,1fr);
+}
+
 }
 .box {
     color:#00FF88;
@@ -242,6 +259,11 @@ font-weight: normal;
     border-radius: 20px;
     padding: 10px 20px;
     background-color:#230E3D;
+}
+@media screen and (max-width : 576px) {
+    .why-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 .why-box{
     padding:30px ;
@@ -300,7 +322,12 @@ p {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+@media screen and (max-width : 576px) {
+.episode-grid  {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
+}
 .episode-card {
     background: linear-gradient(145deg, #3b0b64, #22003a);
     border-radius: 18px;
@@ -354,9 +381,13 @@ p {
     gap: 30px;
     align-items: center;
     box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
-    m
+    
 }
-
+@media  (max-width : 576px){
+    .host-card{
+        flex: 0 0 100%;
+    }
+}
 .host-card img {
     width: 120px;
     border-radius: 50%;
@@ -382,54 +413,154 @@ align-items: center;
     padding: 7px 12px;
     object-fit: contain;
 }
-.footer{
+.footer {
     padding: 40px 0;
     margin: 0 auto;
     background: url(bg/footer-bg.png);
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position:center top;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
-.footer-content  {
+
+.footer-content {
     max-width: 1100px;
     text-align: center;
     padding: 40px 20px;
     width: 90%;
-    
+
 }
-.footer-social{
-text-align: center;
-padding-bottom: 25px;
-display: inline-block;
-line-height: 32px;
+
+.footer-social {
+    text-align: center;
+    padding-bottom: 25px;
+    display: inline-block;
+    line-height: 32px;
+    gap: 10px;
 }
+
 .menu {
     list-style: none;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     color: white;
+    gap: 10px;
 }
-.menu li{
+
+.menu li {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     font-size: 16px;
     white-space: nowrap;
-    
+
 }
-.footer h3{
+
+.footer h3 {
     font-weight: bold;
     text-align: center;
     font-size: 30px;
-    
+
 }
-.footer h3 span{
-background: linear-gradient(#F7E93F, #FB09B4, #9100F8);
+
+.footer h3 span {
+    background: linear-gradient(#F7E93F, #FB09B4, #9100F8);
     background-clip: text;
     color: transparent;
+}
+@media  screen and (max-width:567px) {
+    .host-card {
+        flex-direction: column;
+    }
+        .host-card h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+                .navbar-container {
+                    padding: 16px;
+                }
+        
+                .menu {
+                    display: none;
+                }
+        
+                .menu-li {
+                    display: none;
+                }
+        
+                .btn {
+                    display: none;
+                }
+        
+                .menu-icon {
+                    display: block;
+                }
+        
+                .navbar-container h1 {
+                    padding-left: 0;
+                    font-size: 26px;
+                }
+        
+                .about-content .h1 {
+                    padding: 40px 20px;
+                    font-weight: bold;
+                    font-size: 32px;
+                }
+                                .footer {
+                                    background: url(bg/footer-bg.png) no-repeat center center;
+                                    background-size: contain;
+                                    height: 248px;
+                
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                
+                                .footer-content {
+                                    padding: 30px 16px;
+                                }
+                
+                
+                                .footer-content {
+                                    text-align: center;
+                                }
+                
+                                .footer-content h3 {
+                                    font-size: 34px;
+                                    margin-bottom: 28px;
+                                }
+                
+                                .footer-social {
+                                    width: 100%;
+                                }
+                
+                                .footer-social .menu {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    gap: 8;
+                                    padding: 0;
+                                    margin-bottom: 26px;
+                                }
+                
+                                .footer-social .menu li {
+                                    justify-content: center;
+                                    font-size: 14px;
+                                    gap: 8px;
+                                }
+                
+                                .footer-social .menu li img {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                
+                                .copywrite {
+                                    font-size: 13px;
+                                    line-height: 1.5;
+                                }
 }
